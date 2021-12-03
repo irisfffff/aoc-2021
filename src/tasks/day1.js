@@ -10,9 +10,19 @@ const calculateIncreased = (arr, diff = 1) => {
   return increased
 }
 
+// -------- Part One --------
+let startTime = process.hrtime()
+
 console.log('Part One ---' + calculateIncreased(data, 1))
+
+const elapsed1 = process.hrtime(startTime)
+console.log('Execution time:', elapsed1[0] + 's, ' + (elapsed1[1] / 1000000).toFixed(3) + 'ms')
+
+
+// -------- Part Two --------
+startTime = process.hrtime()
 
 console.log('Part Two ---' + calculateIncreased(data, 3))
 
-// Part One: 1832
-// Part Two: 1858
+const elapsed2 = process.hrtime(startTime)
+console.log('Execution time:', elapsed2[0] + 's, ' + (elapsed2[1] / 1000000).toFixed(3) + 'ms')
