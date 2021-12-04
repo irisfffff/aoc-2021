@@ -1,3 +1,4 @@
+// ** Count how quickly sea floor depth increases **
 import {readByLine} from '../utils/index.js'
 
 const data = readByLine('../data/day1').slice(0, -1).map(item => parseInt(item))

@@ -1,3 +1,4 @@
+// ** Check power consumption, oxygen and CO2 rate of submarine
 import {readByLine} from '../utils/index.js'
 
 const data = readByLine('../data/day3').slice(0, -1)
