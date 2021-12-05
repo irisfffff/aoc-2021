@@ -1,4 +1,4 @@
-// ** Pilot submarine **
+// --- Day 2: Dive! ---
 import {readByLine} from '../utils/index.js'
 
 const data = readByLine('../data/day2').slice(0, -1).map(item => item.split(' '))

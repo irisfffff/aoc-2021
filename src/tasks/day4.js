@@ -1,4 +1,4 @@
-// ** Play bingo with an octopus **
+// --- Day 4: Giant Squid ---
 import {readByLine, sumArray} from '../utils/index.js'
 
 const data = readByLine('../data/day4').slice(0, -1)

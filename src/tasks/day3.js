@@ -1,4 +1,4 @@
-// ** Check power consumption, oxygen and CO2 rate of submarine
+// --- Day 3: Binary Diagnostic ---
 import {readByLine} from '../utils/index.js'
 
 const data = readByLine('../data/day3').slice(0, -1)
