@@ -7,7 +7,7 @@ const data = readByLine('../data/day5').slice(0, -1)
     return match.slice(1).map(item => parseInt(item))
   })
 
-const drawHorizontal = ([ x1, y1, x2, y2 ], diagram) => {
+const drawStraight = ([ x1, y1, x2, y2 ], diagram) => {
   if (x1 === x2) {
     for (let i = Math.min(y1, y2); i <= Math.max(y1, y2); i++) {
       diagram[i][x1]++
@@ -52,7 +52,7 @@ for (let i = 0; i < width; i++) {
   diagram[i] = new Array(width).fill(0)
 }
 
-data.forEach(line => drawHorizontal(line, diagram))
+data.forEach(line => drawStraight(line, diagram))
 
 const overlaps1 = sumArray(diagram.map(row => row.filter(item => item > 1).length))
 
