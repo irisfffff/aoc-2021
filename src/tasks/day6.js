@@ -1,4 +1,4 @@
-// --- ??? ---
+// --- Day 6: Lanternfish ---
 import {readByLine, sumArray} from '../utils/index.js'
 
 const data = readByLine('../data/day6').slice(0, -1)[0]
