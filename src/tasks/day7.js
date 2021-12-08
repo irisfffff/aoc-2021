@@ -6,6 +6,7 @@ const data = readByLine('../data/day7').slice(0, -1)[0]
 
 
 // -------- Part One --------
+let startTime = process.hrtime()
 const sum1 = []
 
 for (let i = 0; i <= Math.max(...data); i++) {
@@ -14,8 +15,12 @@ for (let i = 0; i <= Math.max(...data); i++) {
 
 console.log('Part One ---', Math.min(...sum1))
 
+const elapsed1 = process.hrtime(startTime)
+console.log('Execution time:', elapsed1[0] + 's, ' + (elapsed1[1] / 1000000).toFixed(3) + 'ms')
+
 
 // -------- Part Two --------
+startTime = process.hrtime()
 const sum2 = []
 
 for (let i = 0; i <= Math.max(...data); i++) {
@@ -26,3 +31,6 @@ for (let i = 0; i <= Math.max(...data); i++) {
 }
 
 console.log('Part Two ---', Math.min(...sum2))
+
+const elapsed2 = process.hrtime(startTime)
+console.log('Execution time:', elapsed2[0] + 's, ' + (elapsed2[1] / 1000000).toFixed(3) + 'ms')

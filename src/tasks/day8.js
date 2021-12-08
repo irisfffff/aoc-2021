@@ -5,14 +5,21 @@ let data = readByLine('../data/day8').slice(0, -1)
 
 
 // -------- Part One --------
+let startTime = process.hrtime()
+
 const appearances = data.map(entry => {
   let [ pattern, output ] = entry.split('|').map(item => item.trim().split(' '))
   return output.filter(item => [ 2, 3, 4, 7 ].includes(item.length)).length
 })
 console.log('Part One ---', sumArray(appearances))
 
+const elapsed1 = process.hrtime(startTime)
+console.log('Execution time:', elapsed1[0] + 's, ' + (elapsed1[1] / 1000000).toFixed(3) + 'ms')
+
 
 // -------- Part Two --------
+startTime = process.hrtime()
+
 const findNumber = (pattern, number) => {
   return pattern.findIndex(item => item.length === number.length && number.split('').every(ele => item.includes(ele)))
 }
@@ -35,3 +42,6 @@ const results = data.map(entry => {
   return parseInt(result.join(''))
 })
 console.log('Part Two ---', sumArray(results))
+
+const elapsed2 = process.hrtime(startTime)
+console.log('Execution time:', elapsed2[0] + 's, ' + (elapsed2[1] / 1000000).toFixed(3) + 'ms')
