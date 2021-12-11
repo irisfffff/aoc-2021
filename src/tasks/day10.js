@@ -1,4 +1,4 @@
-// --- ??? ---
+// --- Day 10: Syntax Scoring ---
 import {readByLine, sumArray, quickSortRecursive} from '../utils/index.js'
 
 const data = readByLine('../data/day10').slice(0, -1)
